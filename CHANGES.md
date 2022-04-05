@@ -16,6 +16,7 @@
 
 - Remove unnecessary parentheses from `with` statements (#2926)
 - Standardise newlines after module-level docstrings (#2996)
+- Remove newlines after function docstrings (#9999)
 
 ### _Blackd_
 
