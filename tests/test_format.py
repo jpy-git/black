@@ -85,6 +85,7 @@ PREVIEW_CASES: List[str] = [
     "one_element_subscript",
     "module_docstring_1",
     "module_docstring_2",
+    "function_docstring",
 ]
 
 SOURCES: List[str] = [

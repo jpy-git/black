@@ -522,7 +522,18 @@ class EmptyLineTracker:
             and self.previous_lines[-1].is_triple_quoted_string
             and current_line.depth == self.previous_lines[-1].depth
         ):
+            # Single newline after class docstring.
             return 1
+
+        if (
+            self.preview
+            and len(self.previous_lines) > 1
+            and self.previous_lines[-2].is_def
+            and self.previous_lines[-1].is_triple_quoted_string
+            and current_line.depth == self.previous_lines[-1].depth
+        ):
+            # No newline after function docstring.
+            return 0
 
         return before
 
