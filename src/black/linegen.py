@@ -1077,7 +1077,6 @@ def maybe_make_parens_invisible_in_atom(
 
 def should_split_line(line: Line, opening_bracket: Leaf) -> bool:
     """Should `line` be immediately split with `delimiter_split()` after RHS?"""
-
     if not (opening_bracket.parent and opening_bracket.value in "[{("):
         return False
 
@@ -1112,7 +1111,6 @@ def generate_trailers_to_omit(line: Line, line_length: int) -> Iterator[Set[Leaf
     set is empty, unless the line should explode, in which case bracket pairs until
     the one that needs to explode are omitted.
     """
-
     omit: Set[LeafID] = set()
     if not line.magic_trailing_comma:
         yield omit

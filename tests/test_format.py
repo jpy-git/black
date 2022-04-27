@@ -93,6 +93,7 @@ PREVIEW_CASES: List[str] = [
     "return_annotation_brackets",
     "module_docstring_1",
     "module_docstring_2",
+    "function_docstring",
 ]
 
 SOURCES: List[str] = [

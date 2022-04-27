@@ -194,7 +194,6 @@ def _normalize(lineend: str, value: str) -> str:
 
 def stringify_ast(node: Union[ast.AST, ast3.AST], depth: int = 0) -> Iterator[str]:
     """Simple visitor generating strings to compare ASTs by content."""
-
     node = fixup_ast_constants(node)
 
     yield f"{'  ' * depth}{node.__class__.__name__}("

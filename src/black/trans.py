@@ -74,7 +74,6 @@ def TErr(err_msg: str) -> Err[CannotTransform]:
 
 def hug_power_op(line: Line, features: Collection[Feature]) -> Iterator[Line]:
     """A transformer which normalizes spacing around power operators."""
-
     # Performance optimization to avoid unnecessary Leaf clones and other ops.
     for leaf in line.leaves:
         if leaf.type == token.DOUBLESTAR:
